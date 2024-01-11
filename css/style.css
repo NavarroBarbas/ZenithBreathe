@@ -8,12 +8,91 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Nunito";
+  src: url("../font/nunito-regular-webfont.woff2") format("woff2"), url("../font/nunito-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "NunitoBold";
+  src: url("../font/nunito-bold-webfont.woff2") format("woff2"), url("../font/nunito-bold-webfont.woff") format("woff");
 }
 
 /* ******************************** */
 
 /* Colores */
-
+:root {
+  /* Beneficios */
+  /* colors */
+  --azul-marino: #19495d;
+  --verde-claro: #188a8b;
+  --verde-oscuro: #0c4546;
+  --beige: #f9e4d4;
+  /* Index */
+  /* colors */
+  --azul-marino: #19495d;
+  --verde-claro: #188a8b;
+  --verde-oscuro: #0c4546;
+  --beige: #f9e4d4;
+}
 /* ******************************** */
+html {
+  font-family: "Nunito", sans-serif;
+  background-image: url(../img/smartphone/banner_zenith.webp);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+/* BANNER */
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  .banner {
+    width: 100vw;
+
+    .banner__titulo {
+      display: flex;
+      justify-content: center;
+      margin-top: 5vw;
+      font-size: 14px;
+      height: 50px;
+      color: var(--verde-oscuro);
+
+      .titulo__img {
+        margin: 0 10px;
+      }
+    }
+
+    .banner__texto {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin-top: 8vh;
+
+      .texto__circulo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background-color: var(--verde-claro);
+        border: 1px solid white;
+        border-radius: 12.5px;
+        color: var(--beige);
+
+        h4 {
+          height: 22px;
+        }
+      }
+
+      .texto__parrafo {
+        width: 240px;
+        text-align: center;
+        color: white
+      }
+    }
+  }
+
+  
+}
