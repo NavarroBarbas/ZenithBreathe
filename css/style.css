@@ -47,6 +47,8 @@ html {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .banner {
     width: 100vw;
@@ -54,7 +56,7 @@ html {
     .banner__titulo {
       display: flex;
       justify-content: center;
-      margin-top: 5vw;
+      margin-top: 10vw;
       font-size: 14px;
       height: 50px;
       color: var(--verde-oscuro);
@@ -68,7 +70,7 @@ html {
       display: flex;
       align-content: center;
       justify-content: center;
-      margin-top: 8vh;
+      margin-top: 3vh;
 
       .texto__circulo {
         display: flex;
@@ -94,5 +96,60 @@ html {
     }
   }
 
-  
+  .contador {
+    margin-top: 2vh;
+    width: 80vw;
+    height: 80vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/smartphone/pasos.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .contador__circuloext {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 70vw;
+      height: 70vw;
+      border: 2px solid var(--verde-oscuro);
+      border-radius: 50%;
+
+      .circuloext__circuloint {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        background-color: var(--verde-claro);
+        opacity: 95%;
+        border: 3px solid var(--beige);
+        border-radius: 50%;
+
+        .circuloint__linea {
+          width: 2vw;
+          height: 15%;
+          background-color: var(--beige);
+          border-radius: 0 0 1vw 1vw;
+          opacity: 100%;
+        }
+
+        .circuloint__lungs {
+          height: 50%;
+        }
+
+        .circuloint__start {
+          font-family: "NunitoBold", sans-serif;
+          height: 35%;
+          font-size: 30px;
+          -webkit-text-stroke: 1px black;
+        }
+      }
+    }
+  }
 }
