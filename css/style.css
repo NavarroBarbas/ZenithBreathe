@@ -50,7 +50,7 @@ html {
   justify-content: center;
   align-items: center;
 
-  .banner {
+  & .banner {
     width: 100vw;
 
     .banner__titulo {
@@ -95,13 +95,13 @@ html {
       }
     }
   }
-  .main {
+  & .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .contador {
+    & .contador {
       margin-top: 2vh;
       width: 80vw;
       height: 80vw;
@@ -115,7 +115,7 @@ html {
       background-size: cover;
       z-index: 1;
   
-      .contador__linea {
+      & .contador__linea {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -126,7 +126,7 @@ html {
         border-radius: 50%;
         
   
-        .contador__circulo {
+        & .contador__circulo {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -146,12 +146,12 @@ html {
           }
         }
   
-        .boton {
+        & .boton {
           position: absolute;
           width: 30vw;
           height: 30vw;
   
-          .boton__start {
+          & .boton__start {
             font-family: "NunitoBold", sans-serif;
             text-align: center;
             font-size: 30px;
@@ -161,23 +161,23 @@ html {
       }
     }
   
-    .informacion {
+    & .informacion {
       margin-top: -10vh;
       background-image: url("../img/smartphone/background2.webp");
       background-repeat: no-repeat;
       width: 100vw;
       height: 100vw;
 
-      .links {
-        margin-top: 15vh;
+      & .links {
         height: 50vh;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(16, 1fr);
         gap: 10px;
+        margin: 15vh 2vh 0 2vh;
         
 
-        .info__texto {
+        & .info__texto {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -193,7 +193,7 @@ html {
           font-size: 80%;
         }
 
-        .beneficios {
+        & .beneficios {
           position: relative;
           grid-column: 1/3;
           grid-row: 1/12;
@@ -202,13 +202,10 @@ html {
           background-size: cover;
           background-position: center;
           border-radius: 15px;
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
-        .beneficios:hover {
-          
-        }
-
-        .buymeacoffee {
+        & .buymeacoffee {
           position: relative;
           grid-column: 3/5;
           grid-row: 1/5;
@@ -217,9 +214,10 @@ html {
           background-size: cover;
           background-position: center;
           border-radius: 15px;
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
-        .projects {
+        & .projects {
           position: relative;
           grid-column: 1/3;
           grid-row: 12/17;
@@ -228,9 +226,10 @@ html {
           background-size: cover;
           background-position: center;
           border-radius: 15px;
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
         }
 
-        .playlists {
+        & .playlists {
           position: relative;
           grid-column: 3/5;
           grid-row: 5/17;
@@ -239,6 +238,14 @@ html {
           background-size: cover;
           background-position: center;
           border-radius: 15px;
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        & .beneficios:hover, .buymeacoffee:hover, .projects:hover, .playlists:hover{
+          transform: scale(1.2);
+          transition: transform 0.5s;
+          z-index: 1;
+          
         }
       }
     }
