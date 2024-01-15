@@ -41,6 +41,7 @@
     <script></script>
     <!-- Scripts a cargar antes de la renderización -->
     <script src="preloader.js"></script>
+    <script src="js/contador.js"></script>
   </head>
   <body>
     <div class="container">
@@ -63,13 +64,13 @@
       <main class="main">
         <section class="contador">
           <div class="contador__linea">
-            <div class="contador__circulo">
+            <div id="segundero" class="contador__circulo">
               <div class="circulo__segundero"></div>
             </div>
-            <div class="boton">
-              <img class="boton__lungs" src="svg/LUNGS.svg">
-              <h4 class="boton__start">START</h4>
-            </div>
+            <a id="boton" class="boton" onclick="comenzar()">
+              <img id="lungs" class="boton__lungs" src="svg/LUNGS.svg">
+              <h4 id="start" class="boton__start">START</h4>
+            </a>
           </div>
         </section>
 
@@ -88,8 +89,8 @@
       
       <footer class="footer">
         <nav class="footer__nav">
-          <a><h4>CONTACTO</h4></a>
-          <a class="coffee">
+          <a href="https://www.linkedin.com/in/javiernavarroweb" class="contacto"><h4>CONTACTO</h4></a>
+          <a href="https://buymeacoffee.com" class="coffee">
             <img src="svg/buymeacoffee.svg"><h4>Buy Me A Coffee</h4>  
           </a>
         </nav>
