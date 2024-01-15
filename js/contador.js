@@ -1,9 +1,12 @@
+let vibracion;
+
 function comenzar() {
     let botonComienza = document.getElementById("boton");
     let botonAcaba = document.getElementById("paraboton");
     
     let start = document.getElementById("start");
     let lungs = document.getElementById("lungs");
+
     if(botonComienza) {
         botonComienza.setAttribute("id", "contadoractivo");
         start.innerHTML = "PAUSE";
@@ -21,6 +24,8 @@ function comenzar() {
         setTimeout(() => cuentaAtras.innerHTML = "1" , 2000);
         setTimeout(() => {
             girar();
+            navigator.vibrate(100);
+            vibracion = setInterval(function () {navigator.vibrate(100);}, 2000);
             botonComienza.setAttribute("id", "paraboton");
             cuentaAtras.style.display="none";
             start.style.display = "block";
@@ -43,6 +48,8 @@ function girar() {
 }
 
 function parar() {
+    clearInterval(vibracion);
+    navigator.vibrate(0);
     let barra = document.getElementById("segundero");
     let botonAcaba = document.getElementById("paraboton");
     barra.style.animation = "none";
