@@ -5,13 +5,13 @@ function comenzar() {
     let start = document.getElementById("start");
     let lungs = document.getElementById("lungs");
     if(botonComienza) {
+        botonComienza.setAttribute("id", "contadoractivo");
         start.innerHTML = "PAUSE";
-        botonComienza.setAttribute("id", "paraboton");
         start.style.display = "none";
         lungs.style.display = "none";
         
         let cuentaAtras = document.createElement("h3");
-        cuentaAtras.setAttribute("id", "tres");
+        cuentaAtras.setAttribute("id", "numero");
         cuentaAtras.classList.add("numero");
         let tres = document.createTextNode("3");
         cuentaAtras.appendChild(tres);
@@ -19,7 +19,9 @@ function comenzar() {
 
         setTimeout(() => cuentaAtras.innerHTML = "2" , 1000);
         setTimeout(() => cuentaAtras.innerHTML = "1" , 2000);
-        setTimeout(() => {girar();
+        setTimeout(() => {
+            girar();
+            botonComienza.setAttribute("id", "paraboton");
             cuentaAtras.style.display="none";
             start.style.display = "block";
             lungs.style.display = "block";
@@ -29,17 +31,21 @@ function comenzar() {
 
     if(botonAcaba) {
         parar();
-        start.innerHTML = "START";
-        botonAcaba.setAttribute("id", "comienza");
     }
 }
 
 function girar() {
     let barra = document.getElementById("segundero");
-    barra.style.animation = "rotateAndPause 10s linear infinite";
+    barra.style.animation = "rotateAndPause 8s linear infinite";
+    setTimeout(() => {
+        parar();
+    }, 300000);
 }
 
 function parar() {
     let barra = document.getElementById("segundero");
+    let botonAcaba = document.getElementById("paraboton");
     barra.style.animation = "none";
+    start.innerHTML = "START";
+    botonAcaba.setAttribute("id", "boton");
 }
