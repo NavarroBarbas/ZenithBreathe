@@ -369,6 +369,11 @@ html {
   
 }
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
 @keyframes rotateAndPause {
   0% { transform: rotate(0deg); }
 

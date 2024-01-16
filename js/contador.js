@@ -23,13 +23,16 @@ function comenzar() {
         setTimeout(() => cuentaAtras.innerHTML = "2" , 1000);
         setTimeout(() => cuentaAtras.innerHTML = "1" , 2000);
         setTimeout(() => {
-            girar();
-            navigator.vibrate(100);
-            vibracion = setInterval(function () {navigator.vibrate(100);}, 2000);
-            botonComienza.setAttribute("id", "paraboton");
-            cuentaAtras.style.display="none";
-            start.style.display = "block";
-            lungs.style.display = "block";
+            cuentaAtras.classList.add("fade-out");
+            setTimeout(() => {
+                girar();
+                navigator.vibrate(100);
+                vibracion = setInterval(function () {navigator.vibrate(100);}, 2000);
+                botonComienza.setAttribute("id", "paraboton");
+                cuentaAtras.style.display = "none";
+                start.style.display = "block";
+                lungs.style.display = "block";
+            }, 1000);
         }, 3000);
         
     }
